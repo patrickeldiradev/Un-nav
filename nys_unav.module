@@ -34,21 +34,21 @@ function nys_unav_theme() {
 function nys_unav_page_top(&$page_top) {
     // Skip menu if not Auto or on administrative page.
     $config = \Drupal::config('nys_unav.settings');
-    $unav_interactive = $config->get('nys_unav.nys_unav_auto');
+    $unav_auto = $config->get('nys_unav.nys_unav_auto');
     $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
-    if ($unav_interactive == '0' || $is_admin) {
+    if ($unav_auto == '0' || $is_admin) {
         return;
     }
 
     switch ($config->get('nys_unav.nys_unav_interactive')) {
         case '0':
-            $page_top['page_bottom']['nys_unav'] = array(
+            $page_top['page_top']['nys_unav'] = array(
                 '#weight' => -1000,
                 '#theme' => 'nys_unav_header_static',
             );
             break;
         case '1':
-            $page_top['page_bottom']['nys_unav'] = array(
+            $page_top['page_top']['nys_unav'] = array(
                 '#weight' => -1000,
                 '#theme' => 'nys_unav_header_interactive',
             );
@@ -65,9 +65,9 @@ function nys_unav_page_top(&$page_top) {
 function nys_unav_page_bottom(&$page_bottom) {
     // Skip menu if not Auto or on administrative page.
     $config = \Drupal::config('nys_unav.settings');
-    $unav_interactive = $config->get('nys_unav.nys_unav_auto');
+    $unav_auto = $config->get('nys_unav.nys_unav_auto');
     $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
-    if ($unav_interactive == '0' || $is_admin) {
+    if ($unav_auto == '0' || $is_admin) {
         return;
     }
 
