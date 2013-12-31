@@ -38,11 +38,21 @@ class NysUNavHeaderBlock extends BlockBase {
             case '0':
                 $block = array(
                     '#theme' => 'nys_unav_header_static',
+                    '#attached' => array(
+                        'library' => array(
+                            'nys_unav/nys_unav'
+                        ),
+                    ),
                 );
                 break;
             case '1':
                 $block = array(
                     '#theme' => 'nys_unav_header_interactive',
+                    '#attached' => array(
+                        'library' => array(
+                            'nys_unav/nys_unav'
+                        ),
+                    ),
                 );
                 break;
         }

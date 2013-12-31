@@ -45,12 +45,22 @@ function nys_unav_page_top(&$page_top) {
             $page_top['page_top']['nys_unav'] = array(
                 '#weight' => -1000,
                 '#theme' => 'nys_unav_header_static',
+                '#attached' => array(
+                    'library' => array(
+                        'nys_unav/nys_unav'
+                    ),
+                ),
             );
             break;
         case '1':
             $page_top['page_top']['nys_unav'] = array(
                 '#weight' => -1000,
                 '#theme' => 'nys_unav_header_interactive',
+                '#attached' => array(
+                    'library' => array(
+                        'nys_unav/nys_unav'
+                    ),
+                ),
             );
             break;
     }
