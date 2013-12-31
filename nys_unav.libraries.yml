@@ -1,0 +1,5 @@
+nys_unav:
+  version: 1.x
+  css:
+    theme:
+      css/nys_unav.css: {}
