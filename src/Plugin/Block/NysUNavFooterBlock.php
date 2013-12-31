@@ -24,9 +24,9 @@ class NysUNavFooterBlock extends BlockBase {
     /**
      * {@inheritdoc}
      */
-    /*protected function blockAccess(AccountInterface $account) {
+    protected function blockAccess(AccountInterface $account) {
         return $account->hasPermission('administer nys unav');
-    }*/
+    }
 
     /**
      * {@inheritdoc}
@@ -38,13 +38,11 @@ class NysUNavFooterBlock extends BlockBase {
             case '0':
                 $block = array(
                     '#theme' => 'nys_unav_footer_static',
-                    //'#title' => t('NYS uNav Static Footer'),
                 );
                 break;
             case '1':
                 $block = array(
                     '#theme' => 'nys_unav_footer_interactive',
-                    //'#title' => t('NYS uNav Interactive Footer'),
                 );
                 break;
         }
