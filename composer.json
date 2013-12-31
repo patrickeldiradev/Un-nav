@@ -1,0 +1,14 @@
+{
+  "name": "drupal/nys_unav",
+  "type": "drupal-module",
+  "description": "Port of NYS Universal Navigation Drupal module for Drupal 8",
+  "keywords": ["Drupal"],
+  "license": "None",
+  "homepage": "https://github.com/chrisvanwormer/nys_unav",
+  "version": "dev-master",
+  "source": {
+    "url": "https://github.com/chrisvanwormer/nys_unav.git",
+    "type": "git",
+    "reference": "master"
+  }
+}
